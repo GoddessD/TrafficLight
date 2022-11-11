@@ -1,7 +1,4 @@
-import React,(useState) from "react";
-
-//include images into your bundle
-import { useState } from "react";
+import React, { useState } from "react";
 
 //create your first component
 const Home = () => {
@@ -9,23 +6,29 @@ const Home = () => {
 	return (
 		<div className="center">
 			<div className="wiretop"></div>
+			<div classname="box">
 
-		<div classname="box">
+				<div
+					onClick={() => setSelectedColor('red')}
+					className={"red light" + (selectedcolor === "red" ? "ambient" : "")}>
+				</div>
 
-		<div onClick={() => setSelectedColor('red')}
-		className="red light" + (selectedcolor === "red" ? "ambient" : "")}>
-		</div>
+				<div
+					onClick={() => setSelectedColor('yellow')}
+					className={"yellow light" + (selectedcolor === "yellow" ? "ambient" : "")}>
+				</div>
 
-		<div onClick={() => setSelectedColor('yellow')}
-		className="yellow light"+ (selectedcolor === "yellow" ? "ambient" : "")}>
-		</div>
+				<div onClick={() => setSelectedColor('green')}
+					className={"green light" + (selectedcolor === "green" ? "ambient" : "")}>
+				</div>
 
-		<div onClick={() => setSelectedColor('green')}
-		className="green light"+ (selectedcolor === "green" ? "ambient" : "")}>
+				<button
+					onClick={() => setSelectedColor('purple')}
+					className={"" + (selectedcolor === "purple" ? "light purple ambient box2" : "")}>
+					Click to see Purple!
+				</button>
+			</div >
 		</div >
-		</div >
-	</div >
-	
 	);
 };
 
