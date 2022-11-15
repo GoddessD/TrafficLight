@@ -3,32 +3,40 @@ import React, { useState } from "react";
 //create your first component
 const Home = () => {
 	const [selectedcolor, setselectedColor] = useState("");
+	function glow(){
+				if (selectedcolor === "red") {
+			setselectedColor("yellow")
+		} else if (selectedcolor === "yellow"){
+			setselectedColor ("green")
+		} else {
+			setselectedColor("red")
+		}
+		}
+	setTimeout(glow, 2000)
 	return (
-		<div className="center">
-			<div className="wiretop"></div>
+		<><div className="wiretop"></div><div className="center">
 			<div classname="box">
-
 				<div
-					onClick={() => setSelectedColor('red')}
-					className={"red light" + (selectedcolor === "red" ? "ambient" : "")}>
+					onClick={() => setselectedColor('red')}
+					className={"red light" + (selectedcolor === "red" ? " circle ambient" : "")}>
 				</div>
 
 				<div
-					onClick={() => setSelectedColor('yellow')}
-					className={"yellow light" + (selectedcolor === "yellow" ? "ambient" : "")}>
+					onClick={() => setselectedColor('yellow')}
+					className={"yellow light" + (selectedcolor === "yellow" ? "circle ambient" : "")}>
 				</div>
 
-				<div onClick={() => setSelectedColor('green')}
-					className={"green light" + (selectedcolor === "green" ? "ambient" : "")}>
+				<div onClick={() => setselectedColor('green')}
+					className={"green light" + (selectedcolor === "green" ? "circle ambient" : "")}>
 				</div>
 
 				<button
-					onClick={() => setSelectedColor('purple')}
+					onClick={() => setselectedColor('purple')}
 					className={"" + (selectedcolor === "purple" ? "light purple ambient box2" : "")}>
 					Click to see Purple!
 				</button>
-			</div >
-		</div >
+			</div>
+		</div></>
 	);
 };
 

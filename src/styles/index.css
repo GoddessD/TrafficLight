@@ -1,7 +1,8 @@
 .wiretop {
-    height: 80px;
+    height: 90px;
     width: 10px;
     background-color: black;
+    margin-left: 47.7%;
 }
 
 .center{
@@ -9,6 +10,10 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-color: black;
+    height: 350px;
+    width: 100px;
+    margin-left: 45%;
 }
 
 .box{
@@ -56,4 +61,8 @@ background-color: green;
 
 .ambient{
     box-shadow: 0px 0px 30px 30px white;
+}
+
+.circle {
+        border-radius: 50%;
 }
